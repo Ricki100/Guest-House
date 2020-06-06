@@ -53,23 +53,62 @@
 	  </div>
   
 	<!--logo reveal-->
-  <div data-barba="container" data-barba-namespace="home">
-	  <img src="/img/prayer.jpg" alt="home" class="home">
-  <div class="headline" >
-	<img class = "logo wow fadeIn delay-1" style="animation-duration: 3s;" src="img/grey.svg" alt="logo">
-	
-	<div class="about" class="wow fadeInUp delay-1" style="animation-duration: 1.5s;">
-			<h1> An oasis, clean and inviting </h1>
-			<p>Situated in Harare, within 3.9 km of Mbare Musika Market and 4.2 km of Mukuvisi Woodlands,
-			 Greystone Park Guest House features accommodation with a garden and free WiFi throughout the 
-			 property as well as free private parking for guests who drive. The property is set 7 km 
-			 from Maruta Shopping Center, 7 km from Harare Botanical Gardens and 8 km from Avondale Shopping Centre. 
-			The accommodation offers a 24-hour front desk, a shared kitchen and currency exchange for guests. 
-			The staff and location is Amazing</p>
-			<a href="gallery.html" class="cta" >Photo Gallery</a>
-	   </div>
-  
-  </div>
+  <div data-barba="container" data-barba-namespace="booking" >
+	  <div class="two"></div>
+	<form  class="contact gform pure-form pure-form-stacked" method="POST" data-email="greystonezw001@gmail.com"
+	action="https://script.google.com/macros/s/AKfycbxPZdJV4xFFBExS5vVmfyWsvhlWKu7C4ra5dAg-1w/exec">
+		<div class="form">
+		<div class="input">
+		<label for="fname">First Name</label>
+		<input type="text" id="fname" name="fname" style="width: 400px !important;" required>
+		</div>
+		<div class="input" >
+		<label for="fname">Last Name</label>
+		<input type="text" id="lname" name="lname" style="width: 400px !important;" required>
+	</div>
+		<div class="input">
+		<label for="fname">Cell Number</label>
+		<input type="text" id="cell" name="cell">
+	</div>
+		<div class="input">
+		<label for="fname">E-mail</label>
+		<input type="text" id="email" name="email">
+	</div>
+		<div class="input">
+		<label for="fname">Address</label>
+		<input type="text" id="address" name="address" style="width: 400px !important;" required>
+	</div>
+		<div class="input">
+		<label for="fname">Check-in-date</label>
+		<input type="date" id="checkin" name="checkin" required>
+	</div>
+		<div class="input">
+		<label for="fname">Check-out-date</label>
+		<input type="date" id="checkout" name="checkout" required>
+	</div>
+		<div class="input">
+		<label for="fname">Number of Adults</label>
+		<input type="text" id="adults" name="adults" required>
+	</div>
+		<div class="input">
+		<label for="fname">Number of children</label>
+		<input type="text" id="kids" name="kids" required>
+	</div>
+		<div class="input">
+		<label for="fname">Do you need transport?</label>
+		<input type="radio" id="transport" name="transport" style="width: 100px !important;" value="YES">YES
+		<input type="radio" id="transport" name="transport" style="width: 100px !important;" value="NO">NO
+	</div>
+
+	<button class="booking" name="submit" type="submit"  data-submit="...Sending" >Submit</button>
+	<div class="thankyou_message" style="display:none;">
+		<h2>Thank you for your booking.
+		  We will get back to you soon!</h2>
+		</div>
+</div>
+
+
+	  </form>
   </div>
 
 	
@@ -95,6 +134,8 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
 
    <script src="https://unpkg.com/@barba/core"></script>
+   <script data-cfasync="false" type="text/javascript"
+src="js/form-submission-handler.js"></script>
 
 </body>
 

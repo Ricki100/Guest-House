@@ -2040,7 +2040,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
  .port-wrap{
   position: relative;
   border: 0px solid black;
-  top: 600px;
+  top: 100px;
 }
 
 #portfolio {
