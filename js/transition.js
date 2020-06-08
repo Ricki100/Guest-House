@@ -21,9 +21,11 @@ function pageTransition() {
 function contentAnimation() {
 
     var tl = gsap.timeline();
-    tl.from('.cta', 2, {x: '-190', opacity: 0,  ease: Back.easeOut.config(1.9)})
-    tl.from('.sub-head', 2, {y: '200', opacity: 0, ease: Back.easeOut.config(1.9)},'-=2')
-    tl.from('h1', 1, { opacity: 0,  ease: Power2.easeOut})
+    tl.from('.cta', 2, {y: '-200', opacity: 0,  ease: Back.easeOut.config(1.9)},'+=1')
+    tl.from('.logo', 2, {y: '200', opacity: 0, ease: Back.easeOut.config(1.9)},'-=1')
+    tl.from('h1', 1, { opacity: 0,  ease: Power2.easeOut},'-=.5')
+    tl.from('.about p', 1, { opacity: 0,  ease: Power2.easeOut},'-=.3')
+    tl.from('form', 2, {y: '200', opacity: 0, ease: Back.easeOut.config(1.9)},'-=4')
     
   }
   

@@ -499,3 +499,53 @@ for (var i = 0; i < btns.length; i++) {
 }
 //end//
 
+//emailvalidation//
+function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+document.form1.email.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.email.focus();
+return false;
+}
+}
+
+
+function ValidateEmail() {
+	var email = document.getElementById("email").value;
+	var lblError = document.getElementById("lblError");
+	lblError.innerHTML = "";
+	var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+	if (!expr.test(email)) {
+		lblError.innerHTML = "Invalid email address.";
+	}
+}
+
+
+//form validation
+const name = document.getElementById('fname')
+const password = document.getElementById('lname')
+const form = document.getElementById('form')
+const errorElement = document.getElementById('error')
+
+form.addEventListener('submit', (e) => {
+  let messages = []
+  if (name.value === '' || name.value == null) {
+    messages.push('Name is required')
+  }
+
+ if (password.value === '') {
+    messages.push('Password required')
+  }
+
+  if (messages.length > 0) {
+    e.preventDefault()
+    errorElement.innerText = messages.join(', ')
+  }
+})

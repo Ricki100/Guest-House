@@ -34,7 +34,7 @@
 
 </head>
 
-<body class="top" data-barba="wrapper">
+<body class="top" data-barba="wrapper" onload='document.form1.email.focus()'>
 
 	<div class="loading-container">
 		<div class="loading-screen">
@@ -42,11 +42,10 @@
 	  </div>
 	  <!--Navbar-->
 
-	  <div id="navbar" class="topnav">
+	  <div id="navbar" class="topnav" >
 		<a class="btn active" href="index.html" id="button">Home</a>
-		<a class="btn" href="#founder">Staff</a>
-		<a class="btn" href="#promise">Contacts</a>
 		<a class="btn book" href="booking.html">Bookings</a>
+		<a class="btn book" href="gallery.html">Gallery</a>
 		<a href="javascript:void(0);" class="icon" onclick="menu()">
 			<i class="fa fa-bars"></i>
 		  </a>
@@ -55,12 +54,13 @@
 	<!--logo reveal-->
   <div data-barba="container" data-barba-namespace="booking" >
 	  <div class="two"></div>
-	<form  class="contact gform pure-form pure-form-stacked" method="POST" data-email="greystonezw001@gmail.com"
+	  <div id="error"></div>
+	<form id="form" name="form1" class="contact gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
 	action="https://script.google.com/macros/s/AKfycbxPZdJV4xFFBExS5vVmfyWsvhlWKu7C4ra5dAg-1w/exec">
 		<div class="form">
 		<div class="input">
 		<label for="fname">First Name</label>
-		<input type="text" id="fname" name="fname" style="width: 400px !important;" required>
+		<input type="text" id="fname" name="fname" style="width: 400px !important;" required >
 		</div>
 		<div class="input" >
 		<label for="fname">Last Name</label>
@@ -68,12 +68,13 @@
 	</div>
 		<div class="input">
 		<label for="fname">Cell Number</label>
-		<input type="text" id="cell" name="cell">
+		<input type="number" id="cell" name="cell" onkeypress="phonenumber" required>
 	</div>
 		<div class="input">
 		<label for="fname">E-mail</label>
-		<input type="text" id="email" name="email">
-	</div>
+		<input type="email" id="email" name="email" type="email" onkeyup="ValidateEmail();" required>
+		<span id="lblError" style="color: red"></span>
+		</div>
 		<div class="input">
 		<label for="fname">Address</label>
 		<input type="text" id="address" name="address" style="width: 400px !important;" required>
@@ -88,11 +89,11 @@
 	</div>
 		<div class="input">
 		<label for="fname">Number of Adults</label>
-		<input type="text" id="adults" name="adults" required>
+		<input type="number" id="adults" name="adults" onkeypress="phonenumber" required>
 	</div>
 		<div class="input">
 		<label for="fname">Number of children</label>
-		<input type="text" id="kids" name="kids" required>
+		<input type="number" id="kids" name="kids" onkeypress="phonenumber" required>
 	</div>
 		<div class="input">
 		<label for="fname">Do you need transport?</label>
@@ -100,15 +101,16 @@
 		<input type="radio" id="transport" name="transport" style="width: 100px !important;" value="NO">NO
 	</div>
 
-	<button class="booking" name="submit" type="submit"  data-submit="...Sending" >Submit</button>
-	<div class="thankyou_message" style="display:none;">
-		<h2>Thank you for your booking.
-		  We will get back to you soon!</h2>
-		</div>
+	<button class="booking" type="submit">Send</button>
 </div>
-
+ <!-- Customise the Thankyou Message People See when they submit the form: -->
+ <div class="thankyou_message" style="display:none;">
+	<h2><em>Thanks</em> for contacting us!
+	  We will get back to you soon!</h2>
+  </div>
 
 	  </form>
+	  
   </div>
 
 	
@@ -125,6 +127,8 @@
    
    <script src="js/jquery-2.1.3.min.js"></script>
    <script src="js/plugins.js"></script>
+   <script data-cfasync="false" type="text/javascript"
+   src="form-submission-handler.js"></script>
    <script src="js/main.js"></script>
    <script src="js/transition.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
@@ -134,8 +138,27 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
 
    <script src="https://unpkg.com/@barba/core"></script>
-   <script data-cfasync="false" type="text/javascript"
-src="js/form-submission-handler.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+   <script>
+            
+function phonenumber(inputtxt){
+  var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+  if((inputtxt.value.match(phoneno)) {
+      return true;
+        }
+      else
+        {
+        alert("message");
+        return false;
+        }
+}
+
+	
+</script>
+
+
+
 
 </body>
 
