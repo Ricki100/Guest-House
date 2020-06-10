@@ -1,78 +1,89 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
-<head>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greystone Guesthouse</title>
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/responsee.css">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+	<link rel="stylesheet" href="css/lightcase.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+    <!-- CUSTOM STYLE -->      
+    <link rel="stylesheet" href="css/template-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,600,900&subset=latin-ext" rel="stylesheet"> 
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" /> <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />     
+  </head>
 
-   <!--- basic page needs
-   ================================================== -->
-   <meta charset="utf-8">
-   <title>Greystone Park Guest House</title>
-	<meta name="description" content="">  
-	<meta name="author" content="">
+  <body class="size-1140">
+  	<!-- PREMIUM FEATURES BUTTON -->
+  	<a class=" wow bounceIn delay-3s hide-s" href="booking.html" style="position:fixed;top:120px;right:-14px;z-index:10;"><img src="img/premium-features.png" alt=""></a>    
+    <div id="page-wrapper">
+      <!-- HEADER -->
+      <header role="banner" class="position-absolute margin-top-30 margin-m-top-0 margin-s-top-0">    
+        <!-- Top Navigation -->
+        <nav class="background-transparent background-transparent-hightlight full-width sticky">
+          <div class="s-12 l-2">
+            <a href="index.html" class="logo">
+              <!-- Logo version before sticky nav -->
+              <img class="logo-before" src="img/logo-01.png" alt="">
+              <!-- Logo version after sticky nav -->
+              <img class="logo-after" src="img/logo-01.png" alt="">
+            </a>
+          </div>
+          <div class="s-12 l-10">
+            <div class="top-nav right">
+              <p class="nav-text"></p>
+              <ul class="right chevron">
+                   <!--<li><a href="index.html">Home</a></li>-->
+               <!--<li><a href="about-us.html">About Us</a></li> -->             
+                <!--<li><a href="contact.html">Contact</a></li>-->
+              </ul>
+            </div>
+          </div>  
+        </nav>
+      </header>
+      
+      <!-- MAIN -->
+      <main role="main">
+        <!-- Content -->
+        <article>
+          <header class="section background-white">
+            <div class="line text-center">        
+              <h1 class="wow fadeInUp delay-1 text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1" style="animation-duration: 1.5s;">Bookings</h1>
+              <p class="wow fadeInUp delay-1s margin-bottom-0 text-size-16 text-dark" style="animation-duration: 1.5s;">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.<br>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
+            </div>  
+          </header>
+          <section class=" wow fadeInUp delay-2s full-width background-dark" style="animation-duration: 1.5s;">
+            <div class="s-12 m-12 l-6">
+              <!-- Change the background image -->  
+              <div style="background-image: url(img/img-contact.jpg);" class="contact-image" ></div>
+            </div>
 
-   <!-- mobile specific metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
- 	<!-- CSS
-   ================================================== -->
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/vendor.css">  
-   <link rel="stylesheet" href="css/main.css">  
-   <link rel="stylesheet" href="css/prayer.css">
-
-   <!-- script
-   ================================================== -->
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
-
-   <!-- favicons
-	================================================== -->
-	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-	<link rel="icon" href="favicon.png" type="image/x-icon">
-
-</head>
-
-<body class="top" data-barba="wrapper" onload='document.form1.email.focus()'>
-
-	<div class="loading-container">
-		<div class="loading-screen">
-		</div>
-	  </div>
-	  <!--Navbar-->
-
-	  <div id="navbar" class="topnav" >
-		<a class="btn active" href="index.html" id="button">Home</a>
-		<a class="btn book" href="booking.html">Bookings</a>
-		<a class="btn book" href="gallery.html">Gallery</a>
-		<a href="javascript:void(0);" class="icon" onclick="menu()">
-			<i class="fa fa-bars"></i>
-		  </a>
-	  </div>
+            <div class="form">
+              <form id="form" name="form1" class="contact gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbxPZdJV4xFFBExS5vVmfyWsvhlWKu7C4ra5dAg-1w/exec" onsubmit="return validateForm()">
   
-	<!--logo reveal-->
-  <div data-barba="container" data-barba-namespace="booking" >
-	  <div class="two"></div>
-	  <div id="error"></div>
-	<form id="form" name="form1" class="contact gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
-	action="https://script.google.com/macros/s/AKfycbxPZdJV4xFFBExS5vVmfyWsvhlWKu7C4ra5dAg-1w/exec">
-		<div class="form">
-		<div class="input">
+  <div class="input">
 		<label for="fname">First Name</label>
-		<input type="text" id="fname" name="fname" style="width: 400px !important;" required >
+		<input type="text" id="fname" name="fname" style="width: 400px !important;" required>
 		</div>
 		<div class="input" >
 		<label for="fname">Last Name</label>
 		<input type="text" id="lname" name="lname" style="width: 400px !important;" required>
-	</div>
-		<div class="input">
-		<label for="fname">Cell Number</label>
-		<input type="number" id="cell" name="cell" onkeypress="phonenumber" required>
+  </div>
+  <div class="input">
+		<label for="fname">Cell</label>
+		<input type="number" id="cell" name="cell" onkeypress="phonenumber" style="width: 200px !important;" required>
 	</div>
 		<div class="input">
 		<label for="fname">E-mail</label>
-		<input type="email" id="email" name="email" type="email" onkeyup="ValidateEmail();" required>
+		<input type="email" id="email" name="email" type="email" style="width: 200px !important;" onkeyup="ValidateEmail()" required>
 		<span id="lblError" style="color: red"></span>
 		</div>
 		<div class="input">
@@ -80,19 +91,19 @@
 		<input type="text" id="address" name="address" style="width: 400px !important;" required>
 	</div>
 		<div class="input">
-		<label for="fname">Check-in-date</label>
+		<label for="fname">Check-in</label>
 		<input type="date" id="checkin" name="checkin" required>
 	</div>
 		<div class="input">
-		<label for="fname">Check-out-date</label>
+		<label for="fname">Check-out</label>
 		<input type="date" id="checkout" name="checkout" required>
 	</div>
 		<div class="input">
-		<label for="fname">Number of Adults</label>
+		<label for="fname">Adults</label>
 		<input type="number" id="adults" name="adults" onkeypress="phonenumber" required>
 	</div>
 		<div class="input">
-		<label for="fname">Number of children</label>
+		<label for="fname">Kids</label>
 		<input type="number" id="kids" name="kids" onkeypress="phonenumber" required>
 	</div>
 		<div class="input">
@@ -103,63 +114,121 @@
 
 	<button class="booking" type="submit">Send</button>
 </div>
- <!-- Customise the Thankyou Message People See when they submit the form: -->
- <div class="thankyou_message" style="display:none;">
-	<h2><em>Thanks</em> for contacting us!
-	  We will get back to you soon!</h2>
-  </div>
-
-	  </form>
-	  
-  </div>
-
-	
-
-
-
-   
 
 
 
 
-   <!-- Java Script
-   ================================================== --> 
-   
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script data-cfasync="false" type="text/javascript"
-   src="form-submission-handler.js"></script>
-   <script src="js/main.js"></script>
-   <script src="js/transition.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
 
-   <script src="https://unpkg.com/@barba/core"></script>
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
-   <script>
+
+
+
+
+
+
+
+              </form>
+            </div>
             
-function phonenumber(inputtxt){
-  var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
-  if((inputtxt.value.match(phoneno)) {
-      return true;
-        }
-      else
-        {
-        alert("message");
-        return false;
-        }
-}
-
-	
-</script>
 
 
 
 
-</body>
 
+
+
+            
+          </section>
+          
+          <section class="section background-white">
+            <div class="s-12 m-12 l-4 center">
+              
+          </section> 
+        </article>
+      </main>
+      
+      <!-- FOOTER -->
+      <footer>
+        <!-- Contact Us -->
+        <div class="background-dark padding text-center footer-social">
+          <a class="margin-right-10" target="_blank" href="https://www.facebook.com"><i class="icon-facebook_circle text-size-30"></i> <span class="text-strong text-white hide-s hide-m">FACEBOOK</span></a>
+          <a class="margin-right-10" target="_blank" href="https://www.twitter.com"><i class="icon-twitter_circle text-size-30"></i> <span class="text-strong text-white hide-s hide-m">TWITTER</span></a>
+          <a class="margin-right-10" target="_blank" href="https://www.instagram.com"><i class="icon-instagram_circle text-size-30"></i> <span class="text-strong text-white hide-s hide-m">INSTAGRAM</span></a>
+          <a target="_blank" href="https://www.linkedin.com"><i class="icon-linked_in_circle text-size-30"></i> <span class="text-strong text-white hide-s hide-m">LINKEDIN</span></a>                                                                         
+        </div>
+
+        <!-- Main Footer -->
+        <section class="section-small-padding text-center background-dark full-width">
+          <div class="line">
+            <div class="margin">
+              <!-- Collumn 1 -->              
+              <div class="s-12 m-12 l-4 margin-m-bottom-30">
+                <h3 class="text-size-16">Company Address</h3>
+                <p class="text-size-14">
+                   Responsive Street 7<br>
+                   London - United Kingdom<br> 
+                   Europe
+                </p>               
+              </div>
+              <!-- Collumn 2 -->
+              <div class="s-12 m-12 l-4 margin-m-bottom-30">
+                <h3 class="text-size-16">E-mail</h3>
+                <p class="text-size-14">
+                   contact@sampledomain.com<br>
+                   office@sampledomain.com
+                </p>              
+              </div>
+              <!-- Collumn 3 -->
+              <div class="s-12 m-12 l-4 ">
+                <h3 class="text-size-16">Phone Numbers</h3>
+                <p class="text-size-14">
+                   0800 4521 800 50<br>
+                   0450 5896 625 16<br>
+                   0798 6546 465 15
+                </p>             
+              </div>
+            </div>
+          </div>  
+        </section>
+        <hr class="break margin-top-bottom-0" style="border-color: rgba(0, 0, 0, 0.80);">
+        
+        <!-- Bottom Footer -->
+        <section class="padding background-dark full-width">
+          <div class="text-center">
+            <p class="text-size-12">Copyright 2020, Ricardo Design - Web Design</p>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <script type="text/javascript" src="js/jquery.events.touch.js"></script>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-scripts.js"></script> 
+    <script data-cfasync="false" type="text/javascript"
+    src="form-submission-handler.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+		</script>
+
+    <script>
+    function phonenumber(inputtxt){
+      var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+      if((inputtxt.value.match(phoneno)) {
+          return true;
+            }
+          else
+            {
+            alert("message");
+            return false;
+            }
+    }
+  </script>
+
+  
+
+
+
+  </body>
 </html>
